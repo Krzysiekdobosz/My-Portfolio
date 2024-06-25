@@ -6,6 +6,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 export const Projects = () => {
 
