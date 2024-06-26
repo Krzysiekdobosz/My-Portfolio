@@ -1,18 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import {ArrowRightCircle} from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
 import {useState, useEffect} from 'react';
 import 'animate.css';
 
 
 export const Banner = () => {
-    const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, ] = useState(0);
     const [text, setText] = useState('');
-    const toRotate = ['Fullstack Developer'];
-    const period = 100;
-    const [delta, setDelta] = useState(200);
-    const [index, setIndex] = useState(0);
+    const toRotate = ['I am Computer Science Student and Fullstack Developer'];
+    const [delta, ] = useState(100);
+    const [, setIndex] = useState(0);
     
 
 
@@ -27,26 +24,15 @@ export const Banner = () => {
       const tick = () => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+        let updatedText =  fullText.substring(0, text.length + 1);
     
         setText(updatedText);
     
-        if (isDeleting) {
-          setDelta(prevDelta => prevDelta / 1.5);
-        }
+       
     
-        if (!isDeleting && updatedText === fullText) {
-          setIsDeleting(true);
-          setIndex(prevIndex => prevIndex - 1);
-          setDelta(period);
-        } else if (isDeleting && updatedText === '') {
-          setIsDeleting(false);
-          setLoopNum(loopNum + 1);
-          setIndex(1);
-          setDelta(200);
-        } else {
+        
           setIndex(prevIndex => prevIndex + 1);
-        }
+        
       }
 
 
@@ -61,7 +47,7 @@ export const Banner = () => {
     <Row className="align-items-center">
         <Col lg={6} md={12} xl={6} sm={12}>
         <span className="tagline">{}Hi I'm Krzysiek</span>
-        <h1>{'I am Computer Science Student and  '}<span className="wrap">{text}</span></h1>
+        <h1>{''}<span className="wrap">{text}</span></h1>
         <h2>  </h2>
         <p>Currently I am studying Computer Science at the Lublin University of Technology.
              I am interested in web development and I am constantly improving my skills in this field.
