@@ -1,29 +1,26 @@
-import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-
-
 export const Hobby = () => {
-
-    return (
-        <section className="hobby" id="hobbys">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Hobby</h2>
-                        <p>When I'm not coding, I enjoy spending time with my family, reading books, and going to the gym.
-                        Beyond that I hold a unique role as the president of a social dance formation. This leadership position has allowed me to combine physical activity with the joy of connecting with diverse and interesting people. Through dance, I’ve learned teamwork, discipline, and effective communication—skills that complement my technical abilities. <br>
-                              </br> 
-                              <></>
-                               
-                              </p>
-
-                    </div>
-                </div>
+  return (
+    <section className="hobby" id="hobby">
+      <Container>
+        <Row>
+          <Col xs={12}>
+            <div className="hobby-bx">
+              <h2>Hobby</h2>
+              <p>
+                When I'm not coding, I enjoy spending time with my family, reading books and going
+                to the gym. I am also the president of a social dance group, a role that lets me
+                combine physical activity with meeting diverse and interesting people.
+              </p>
+              <p>
+                Dance has taught me teamwork, discipline and clear communication &ndash; skills that
+                make me a better developer as well.
+              </p>
             </div>
-        </div>
-        
-        </section>
-    )
-}
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
+};

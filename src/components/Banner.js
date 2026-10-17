@@ -1,66 +1,65 @@
+import { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import headerImg from '../assets/img/header-img.svg';
-import {useState, useEffect} from 'react';
-import 'animate.css';
 
+const HEADLINE = 'PHP & Backend Developer';
+const TYPING_SPEED = 100;
+
+const HIGHLIGHTS = [
+  { value: '100+', label: 'websites maintained' },
+  { value: '3×', label: "Rector's Scholarship" },
+  { value: 'B.Eng.', label: 'Software Engineering' },
+];
 
 export const Banner = () => {
-    const [loopNum, ] = useState(0);
-    const [text, setText] = useState('');
-    const toRotate = ['I am Computer Science Student and Fullstack Developer'];
-    const [delta, ] = useState(100);
-    const [, setIndex] = useState(0);
-    
+  const [text, setText] = useState('');
 
+  useEffect(() => {
+    if (text.length >= HEADLINE.length) return;
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-          tick();
-        }, delta);
-    
-        return () => { clearInterval(ticker) };
-      }, [text])
-    
-      const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updatedText =  fullText.substring(0, text.length + 1);
-    
-        setText(updatedText);
-    
-       
-    
-        
-          setIndex(prevIndex => prevIndex + 1);
-        
-      }
+    const timeout = setTimeout(() => {
+      setText(HEADLINE.substring(0, text.length + 1));
+    }, TYPING_SPEED);
 
+    return () => clearTimeout(timeout);
+  }, [text]);
 
-
-
-
-
-
-    return(
-<section id="home" className="banner">
- <Container>
-    <Row className="align-items-center">
-        <Col lg={6} md={12} xl={6} sm={12}>
-        <span className="tagline">{}Hi I'm Krzysiek</span>
-        <h1>{''}<span className="wrap">{text}</span></h1>
-        <h2>  </h2>
-        <p>Currently I am studying Computer Science at the Lublin University of Technology.
-             I am interested in web development and I am constantly improving my skills in this field.
-              I am looking for an internship as a Frontend Developer.</p>
-        </Col>
-        <Col lg={6} md={12} xl={6} sm={12}>
-        <img src={ headerImg } alt="Header Img" />
-        </Col>
-
-
-
+  return (
+    <section id="home" className="banner">
+      <Container>
+        <Row className="align-items-center">
+          <Col xs={12} lg={6}>
+            <span className="tagline">Hi, I'm Krzysiek</span>
+            <h1>
+              <span className="txt-rotate" aria-label={HEADLINE}>
+                <span className="wrap">{text}</span>
+              </span>
+            </h1>
+            <p>
+              I'm a PHP and backend developer. I graduated from the Lublin University of Technology
+              with a Bachelor of Engineering (inżynier) degree in Computer Science,
+              specialising in Software Engineering, and I received the Rector's Scholarship three
+              times during my studies.
+            </p>
+            <p>
+              Today I look after more than 100 websites: I keep them secure, fast and up to date,
+              and I build new features on the server side &ndash; from database design to APIs and
+              integrations.
+            </p>
+            <ul className="banner-stats">
+              {HIGHLIGHTS.map(({ value, label }) => (
+                <li key={label}>
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </li>
+              ))}
+            </ul>
+          </Col>
+          <Col xs={12} lg={6}>
+            <img src={headerImg} alt="" />
+          </Col>
         </Row>
- </Container>
-</section>
-    )
-}
+      </Container>
+    </section>
+  );
+};

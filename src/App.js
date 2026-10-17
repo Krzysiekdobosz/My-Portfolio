@@ -1,28 +1,26 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css';
 import './App.css';
 import { NavBar } from './components/NavBar';
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { Banner } from './components/Banner';
-import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
-import { Footer } from './components/Footer';
-import { Contact } from './components/Contact';
+import { Projects } from './components/Projects';
 import { Hobby } from './components/Hobby';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Banner />
-      <Skills />
-      <Projects />
-      <Hobby />
-      <Contact />
-
+      <main>
+        <Banner />
+        <Skills />
+        <Projects />
+        <Hobby />
+        <Contact />
+      </main>
       <Footer />
-
-
-
     </div>
   );
 }
