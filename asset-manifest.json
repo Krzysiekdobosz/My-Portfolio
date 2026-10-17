@@ -1,8 +1,12 @@
 {
   "files": {
     "main.css": "/My-Portfolio/static/css/main.0b17f7b2.css",
-    "main.js": "/My-Portfolio/static/js/main.7275b8b0.js",
+    "main.js": "/My-Portfolio/static/js/main.d232b1ca.js",
     "static/media/banner-bg.png": "/My-Portfolio/static/media/banner-bg.d1a4fcb1ce66f6a119b3.png",
+    "static/media/project-bramy.jpg": "/My-Portfolio/static/media/project-bramy.d8cc95349cc3e96b00d1.jpg",
+    "static/media/project-specfood.jpg": "/My-Portfolio/static/media/project-specfood.54ed031d5eada30956f6.jpg",
+    "static/media/project-laperfe.jpg": "/My-Portfolio/static/media/project-laperfe.429ebc635ecbb9046877.jpg",
+    "static/media/project-soccerbox.jpg": "/My-Portfolio/static/media/project-soccerbox.54c86a95dccce2095160.jpg",
     "static/media/project-medisept.jpg": "/My-Portfolio/static/media/project-medisept.a86b7755d0a42d5314c5.jpg",
     "static/media/project-wsparcielto.jpg": "/My-Portfolio/static/media/project-wsparcielto.a90cc169ce76e320cffc.jpg",
     "static/media/CentraNo2-Bold.ttf": "/My-Portfolio/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
@@ -26,10 +30,10 @@
     "static/media/meter6.svg": "/My-Portfolio/static/media/meter6.60e23942f41d4dc73de0d271b4453605.svg",
     "static/media/meter7.svg": "/My-Portfolio/static/media/meter7.bfc29cc664956a7748f9ee78fa82ec7b.svg",
     "main.0b17f7b2.css.map": "/My-Portfolio/static/css/main.0b17f7b2.css.map",
-    "main.7275b8b0.js.map": "/My-Portfolio/static/js/main.7275b8b0.js.map"
+    "main.d232b1ca.js.map": "/My-Portfolio/static/js/main.d232b1ca.js.map"
   },
   "entrypoints": [
     "static/css/main.0b17f7b2.css",
-    "static/js/main.7275b8b0.js"
+    "static/js/main.d232b1ca.js"
   ]
 }
