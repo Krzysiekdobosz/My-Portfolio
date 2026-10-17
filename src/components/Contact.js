@@ -4,7 +4,6 @@ import TrackVisibility from 'react-on-screen';
 import contactImg from '../assets/img/contact-img.svg';
 import { createChallenge, getLastSentAt, markSent, validateSubmission, MESSAGE_MAX_LENGTH } from '../utils/spamGuard';
 
-// Assembled at runtime so the address does not appear as plain text in the bundle.
 const CONTACT_EMAIL = ['krzysiekdobosz2001', 'gmail.com'].join(String.fromCharCode(64));
 
 const initialForm = {

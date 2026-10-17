@@ -1,7 +1,3 @@
-// Client-side protection for the contact form. The site is static, so these checks
-// stop simple bots and accidental double submits; they are not a replacement for
-// server-side validation.
-
 export const MIN_FILL_TIME_MS = 3000;
 export const COOLDOWN_MS = 60 * 1000;
 export const MAX_LINKS = 2;
@@ -30,12 +26,10 @@ export const markSent = (now = Date.now()) => {
   try {
     window.localStorage.setItem(LAST_SENT_KEY, String(now));
   } catch {
-    // Storage can be blocked (private mode); the cooldown is best effort.
+    // ignore
   }
 };
 
-// Returns null when the submission looks legitimate. A filled honeypot returns
-// `{ bot: true }` so the form can pretend it worked instead of tipping the bot off.
 export const validateSubmission = ({ form, honeypot, startedAt, challenge, challengeAnswer, lastSentAt, now = Date.now() }) => {
   if (honeypot) {
     return { bot: true };

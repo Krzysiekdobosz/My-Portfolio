@@ -3,6 +3,10 @@ import TrackVisibility from 'react-on-screen';
 import { ProjectCard } from './ProjectCard';
 import mediseptImg from '../assets/img/project-medisept.jpg';
 import wsparcieLtoImg from '../assets/img/project-wsparcielto.jpg';
+import laperfeImg from '../assets/img/project-laperfe.jpg';
+import specfoodImg from '../assets/img/project-specfood.jpg';
+import bramyImg from '../assets/img/project-bramy.jpg';
+import soccerboxImg from '../assets/img/project-soccerbox.jpg';
 import colorSharp2 from '../assets/img/color-sharp2.png';
 
 const commercialProjects = [
@@ -22,6 +26,42 @@ const commercialProjects = [
     stack: ['Laravel', 'PHP', 'JavaScript'],
     imgUrl: wsparcieLtoImg,
     url: 'https://wsparcielto.org.pl/',
+    linkLabel: 'Visit website',
+  },
+  {
+    title: 'LAPERFE Clinic',
+    description:
+      'Website of an aesthetic medicine clinic in Lublin. Online shop for treatments and gift vouchers, cart with discount codes, booking and a blog.',
+    stack: ['Laravel', 'PHP', 'E-commerce'],
+    imgUrl: laperfeImg,
+    url: 'https://www.laperfe.pl/',
+    linkLabel: 'Visit website',
+  },
+  {
+    title: 'Spec Food Service',
+    description:
+      'Corporate website of a food service wholesaler supplying restaurants, pizzerias and fast food venues. Product offer, culinary training and careers.',
+    stack: ['Laravel', 'PHP', 'Bootstrap'],
+    imgUrl: specfoodImg,
+    url: 'https://specfood.pl/',
+    linkLabel: 'Visit website',
+  },
+  {
+    title: 'bramy.support',
+    description:
+      'Service website for high-speed industrial doors: controller and drive repairs, spare parts, a knowledge base and several language versions.',
+    stack: ['Laravel', 'PHP', 'i18n'],
+    imgUrl: bramyImg,
+    url: 'https://bramy.support/',
+    linkLabel: 'Visit website',
+  },
+  {
+    title: 'Soccer Box Pro',
+    description:
+      'Website of a hotel and sports complex with football pitches, VR training, a gym and SPA. Online reservations, packages and customer accounts.',
+    stack: ['Laravel', 'PHP', 'Booking'],
+    imgUrl: soccerboxImg,
+    url: 'https://soccerboxpro.pl/',
     linkLabel: 'Visit website',
   },
 ];
