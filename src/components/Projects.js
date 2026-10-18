@@ -7,6 +7,8 @@ import laperfeImg from '../assets/img/project-laperfe.jpg';
 import specfoodImg from '../assets/img/project-specfood.jpg';
 import bramyImg from '../assets/img/project-bramy.jpg';
 import soccerboxImg from '../assets/img/project-soccerbox.jpg';
+import mamyrecepteImg from '../assets/img/project-mamyrecepte.jpg';
+import gdlImg from '../assets/img/project-gdl.jpg';
 import colorSharp2 from '../assets/img/color-sharp2.png';
 
 const commercialProjects = [
@@ -62,6 +64,24 @@ const commercialProjects = [
     stack: ['Laravel', 'PHP', 'Booking'],
     imgUrl: soccerboxImg,
     url: 'https://soccerboxpro.pl/',
+    linkLabel: 'Visit website',
+  },
+  {
+    title: 'MamyRecepte.pl',
+    description:
+      'Online prescription service available 24/7. Medicine search, medical questionnaires reviewed by doctors, online payments, e-prescriptions sent by SMS and a patient account.',
+    stack: ['Laravel', 'PHP', 'Payments'],
+    imgUrl: mamyrecepteImg,
+    url: 'https://www.mamyrecepte.pl/',
+    linkLabel: 'Visit website',
+  },
+  {
+    title: 'GDL Deweloper',
+    description:
+      'Website of a Lublin property developer. Current investments and an apartment search by investment, area, floor, rooms and availability.',
+    stack: ['Laravel', 'PHP', 'Property search'],
+    imgUrl: gdlImg,
+    url: 'https://gdl.pl/',
     linkLabel: 'Visit website',
   },
 ];
