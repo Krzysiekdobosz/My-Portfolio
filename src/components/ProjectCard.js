@@ -1,6 +1,36 @@
 import { Col } from 'react-bootstrap';
 
-export const ProjectCard = ({ title, description, stack, imgUrl, url, linkLabel }) => {
+const Stack = ({ items }) => (
+  <ul className="proj-stack">
+    {items.map((tech) => (
+      <li key={tech}>{tech}</li>
+    ))}
+  </ul>
+);
+
+export const ProjectCard = ({ title, description, stack, imgUrl, url, linkLabel, demoUrl }) => {
+  if (demoUrl) {
+    return (
+      <Col xs={12} md={6} className="mb-4">
+        <div className="proj-imgbx proj-imgbx--plain">
+          <div className="proj-txtx">
+            <h4>{title}</h4>
+            <p>{description}</p>
+            <Stack items={stack} />
+            <div className="proj-actions">
+              <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="proj-btn proj-btn--primary">
+                Live demo
+              </a>
+              <a href={url} target="_blank" rel="noopener noreferrer" className="proj-btn">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </Col>
+    );
+  }
+
   return (
     <Col xs={12} md={6} className="mb-4">
       <a
@@ -14,11 +44,7 @@ export const ProjectCard = ({ title, description, stack, imgUrl, url, linkLabel 
         <div className="proj-txtx">
           <h4>{title}</h4>
           <p>{description}</p>
-          <ul className="proj-stack">
-            {stack.map((tech) => (
-              <li key={tech}>{tech}</li>
-            ))}
-          </ul>
+          <Stack items={stack} />
           <span className="proj-link">{linkLabel} &rarr;</span>
         </div>
       </a>

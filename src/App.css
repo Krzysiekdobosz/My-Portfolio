@@ -594,6 +594,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx--plain .proj-txtx p {
   color: var(--text-muted);
 }
+.proj-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.proj-btn {
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease-in-out;
+}
+.proj-btn:hover {
+  border-color: #fff;
+}
+.proj-btn--primary {
+  background: var(--gradient);
+  border-color: transparent;
+}
+.proj-btn--primary:hover {
+  border-color: transparent;
+  filter: brightness(1.15);
+}
 
 /* Touch screens have no hover, so show the description under the screenshot */
 @media (hover: none), (max-width: 767px) {
