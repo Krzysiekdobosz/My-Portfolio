@@ -56,7 +56,13 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <SocialLinks />
-            <a href="#connect" className="connect-btn" onClick={() => handleNavigate('connect')}>
+            <a
+              href="https://www.linkedin.com/in/krzysztof-dobosz-0827b21aa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="connect-btn"
+              onClick={() => setExpanded(false)}
+            >
               <span>Let's Connect</span>
             </a>
           </span>

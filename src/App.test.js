@@ -5,7 +5,7 @@ test('renders the main sections', () => {
   render(<App />);
   expect(screen.getByRole('heading', { name: /skills/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /projects/i })).toBeInTheDocument();
-  expect(screen.getByRole('heading', { name: /get in touch/i })).toBeInTheDocument();
+  expect(screen.queryByRole('heading', { name: /get in touch/i })).not.toBeInTheDocument();
 });
 
 test('lists the commercial projects', () => {
